@@ -3,6 +3,7 @@ import pers.oyxx.someDemo.ClassandProject.HeroExample;
 import pers.oyxx.someDemo.ClassandProject.TransferParameters;
 import pers.oyxx.someDemo.ClassandProject.hungrySingleClass;
 import pers.oyxx.someDemo.ClassandProject.lazySingleClass;
+import pers.oyxx.someDemo.Other.*;
 import pers.oyxx.someDemo.String.MyStringBuffer;
 
 public class main {
@@ -49,9 +50,9 @@ public class main {
 		// nas.INTminmax();//int最大值最小值
 		// nas.NUMtoString();//数字和字符串互转
 
-		// outputFormat opf = new outputFormat();
-		// opf.outputFormatTest();// 格式输出
-		// // opf.fillWords();
+		 OutputFormat opf = new OutputFormat();
+		 opf.outputFormatTest();// 格式输出
+		 // opf.fillWords();
 
 		// MyStringBuffer myStringBuffer = new MyStringBuffer("abc");
 		// // myStringBuffer.append('d');

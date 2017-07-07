@@ -33,6 +33,7 @@ public class main2 {
 			System.out.println("ElecSword不是消耗品，使用后不会消失");
 		}
 
-
+		
+		
 	}// main函数尾部
 }

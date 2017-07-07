@@ -2,7 +2,7 @@ package pers.oyxx.someDemo.Other;
 
 import java.util.Scanner;
 
-public class outputFormat {
+public class OutputFormat {
 	public void outputFormatTest() {
 		int year = 2020;
 		String str1="mdzz";

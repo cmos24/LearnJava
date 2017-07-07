@@ -107,7 +107,7 @@ public class MyStringBuffer implements IStringBuffer {
 	@Override
 	public int length() {
 		// TODO Auto-generated method stub
-		return 0;
+		return length;
 	}
 
 }

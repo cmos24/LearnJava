@@ -5,7 +5,7 @@ import pers.oyxx.someDemo.Array.*;
 public class main {
 
 	public static void main(String[] args) throws Exception {
-
+		// 测试Github233
 		// //输出5位随机验证码
 		// StringDemo stringdemo = new StringDemo();
 		// String YanZhengMa=stringdemo.get5randomString();

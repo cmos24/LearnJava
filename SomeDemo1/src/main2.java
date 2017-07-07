@@ -2,6 +2,7 @@ import pers.oyxx.someDemo.InterfaceandInherit.*;
 
 public class main2 {
 	public static void main(String[] arg) {
+		//Github测试2
 		// new ADHero();// 会先调用父类的无参构造方法再调用子类的无参构造方法
 		// Hero h = new ADHero("abc");//
 		// 先调用父类的无参构造方法再调用子类的对应有参构造方法，要调用父类的某个有参构造方法要在子类对应的有参构造方法中用super()对象来调用

@@ -34,6 +34,5 @@ public class main2 {
 		}
 
 		
-		
 	}// mainº¯ÊıÎ²²¿
 }

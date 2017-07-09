@@ -1,6 +1,8 @@
 package pers.oyxx.someDemo.Date;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 
 /*准备一个长度是9的日期数组
 使用1970年-2000年之间的随机日期初始化该数组
@@ -10,12 +12,18 @@ import java.util.Date;
 public class DateFormatDemo2 {
 
 	public static void main(String[] args) {
-		Date date = new Date();
+		String randomTime=null;
+		Random random = new Random();
+		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-DD HH:mm:ss");
+		long randomMs = random.nextInt(31536) * 1000000l * 30l;
+
 		Date[] dateArray = new Date[9];
-		for(int i=0;i<9;i++){
-			
+		for (int i = 0; i < 9; i++) {
+			dateArray[i] = new Date(randomMs);
+			randomTime=sdf.format(dateArray[i]);//将date对象转换成字符串
+			System.out.println(randomTime);
 		}
-		
+		//冒泡排序
 
 	}
 

@@ -30,7 +30,7 @@ public class DateDemo {
 		System.out.println("System.currentTimeMillis() \t返回值: " + System.currentTimeMillis());
 		System.out.println();
 
-		// 从1970年1月1日 早上8点0分0秒 开始经历的毫秒数 
+		// 从1970年1月1日 早上8点0分0秒 开始经历的毫秒数
 		Date d2 = new Date(5000);
 		System.out.println("从1970年1月1日 早上8点0分0秒 开始经历了5秒的时间");
 		System.out.println(d2);
@@ -42,7 +42,9 @@ public class DateDemo {
 		// 每年有31536000000毫秒
 		Random random = new Random();
 		// *1000000l后面的“l”一定要加上，否则随机得出的结果和1000000相乘相当于两个int相乘，结果还是int，又因为这个结果的长度比int类型长，所以会自动减去一些长度
-		long randomMs = random.nextInt(31536) * 1000000l + 31536000000l * 25l;
+		long randomMs = random.nextInt(31536) * 1000000l + 31536000000l * 25l + random.nextInt(60000) - 60000;
+		long randomMs2;
+		randomMs2 = (long) random.nextFloat();
 		Date ranDate = new Date(randomMs);
 		System.out.println(ranDate);
 	}

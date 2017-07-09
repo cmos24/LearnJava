@@ -12,19 +12,39 @@ import java.util.Random;
 public class DateFormatDemo2 {
 
 	public static void main(String[] args) {
-		String randomTime=null;
+		String randomTime = null;
 		Random random = new Random();
-		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-DD HH:mm:ss");
-		long randomMs = random.nextInt(31536) * 1000000l * 30l;
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		long randomMs;
 
 		Date[] dateArray = new Date[9];
 		for (int i = 0; i < 9; i++) {
+			randomMs = random.nextInt(31536) * 1000000l + random.nextInt(3600000) - 3600000;
+			// System.out.println(randomMs);
 			dateArray[i] = new Date(randomMs);
-			randomTime=sdf.format(dateArray[i]);//将date对象转换成字符串
-			System.out.println(randomTime);
+			randomTime = sdf.format(dateArray[i]);// 将date对象转换成字符串
+			System.out.println("时间数组中第" + (i + 1) + "个元素：" + randomTime);
 		}
-		//冒泡排序
+		// 冒泡排序
+		boolean c;
+		Date temp;
+		for (int i = 0; i < dateArray.length; i++) {
+			for (int j = 0; j < dateArray.length - i - 1; j++) {
+				// System.out.println("第1个数="+dateArray[j].getTime() % 86400000l);
+				// System.out.println("第2个数="+dateArray[j+1].getTime() % 86400000l);
+				c = dateArray[j].getTime() % 86400000l > dateArray[j + 1].getTime() % 86400000l;
+				if (c) {
+					temp = dateArray[j];
+					dateArray[j] = dateArray[j + 1];
+					dateArray[j + 1] = temp;
+				}
+			}
+		}
+		for (int i = 0; i < dateArray.length; i++) {
+			randomTime = sdf.format(dateArray[i]);
+			System.out.println("排序后第" + (i + 1) + "个元素：" + randomTime);
+		} // 最后得出的结果有点问题
 
-	}
+	}// 主函数尾部
 
 }

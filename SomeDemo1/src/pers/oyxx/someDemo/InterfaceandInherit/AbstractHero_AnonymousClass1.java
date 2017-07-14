@@ -11,13 +11,13 @@ public abstract class AbstractHero_AnonymousClass1 {
 	public abstract void attack();
 
 	public static void main(String[] args) {
-		//在匿名类中使用外部的局部变量，外部的局部变量必须修饰为final
-        final int damage = 5;
-        
-        AbstractHero_AnonymousClass1 hero =new AbstractHero_AnonymousClass1(){
-        	public void attack(){
-        		System.out.printf("新的攻击方式，造成%d点伤害%n",damage);
-        	}
-        };
+		// 在匿名类中使用外部的局部变量，外部的局部变量必须修饰为final
+		final int damage = 5;
+
+		AbstractHero_AnonymousClass1 hero = new AbstractHero_AnonymousClass1() {
+			public void attack() {
+				System.out.printf("新的攻击方式，造成%d点伤害%n", damage);
+			}
+		};
 	}
 }

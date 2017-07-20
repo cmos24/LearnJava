@@ -2,8 +2,12 @@ package pers.oyxx.someDemo.ExceptionsHandling;
 
 //银行账户类
 public class Account {
-	private double balance = 0;
+	protected double balance = 0;
 
+	public Account(double balance) {
+        this.balance = balance;
+    }
+	
 	double getBalance() {
 		return balance;
 	}
@@ -24,11 +28,11 @@ public class Account {
 	}
 
 	public static void main(String[] args) {
-		Account a = new Account();// 开户
+		Account a = new Account(100.5);// 开户,存入100.5
 		a.deposit(100.5);// 存了100.5
 		System.out.println("账号余额为：" + a.getBalance() + "元");// 查看账户余额
 		try {
-			a.withdraw(200);// 取200
+			a.withdraw(300);// 取300
 		} catch (OverdraftExcetpion e) {
 			System.err.println("透支金额："+e.getDeficit());
 			e.printStackTrace();

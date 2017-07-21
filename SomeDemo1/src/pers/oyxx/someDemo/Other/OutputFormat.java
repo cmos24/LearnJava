@@ -2,6 +2,7 @@ package pers.oyxx.someDemo.Other;
 
 import java.util.Scanner;
 
+//输出信息格式
 public class OutputFormat {
 	public void outputFormatTest() {
 		int year = 2020;

@@ -15,7 +15,7 @@ public class ByteStream {
 		// 以字节流的形式读取文件内容
 		try {
 			// 文件对象指向的文件内容是AB两个大写字母，对应ASCII码为65、66
-			File f1 = new File("h:/TestFile3.txt");
+			File f1 = new File("h:/TestFile.txt");
 			// 创建基于文件的输入流
 			FileInputStream fis = new FileInputStream(f1);
 			// 创建字节数组，其长度是文件的长度
@@ -56,7 +56,8 @@ public class ByteStream {
 			byte[] data = new byte[] { 88, 89 };
 			// 把数据写入到输出流
 			fos.write(data);
-			// 关闭输出流
+			fos.write(data);
+			// 关闭输出流，在关闭输出流之前进行多次输出的话内容会叠加而不会覆盖
 			fos.close();
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -10,7 +10,7 @@ import java.io.IOException;
 /*使用数据流的writeUTF()和readUTF() 可以进行数据的格式化顺序读写
 如本例，通过DataOutputStream 向文件顺序写出 布尔值，整数和字符串。 然后再通过DataInputStream 顺序读入这些数据。
 
-注： 要用DataInputStream 读取一个文件，这个文件必须是由DataOutputStream 写出的，否则会出现EOFException，因为DataOutputStream 在写出的时候会做一些特殊标记，只有DataInputStream 才能成功的读取。*/
+注： 要用DataInputStream 读取一个文件，这个文件必须是由DataOutputStream 写出的，否则会出现IOFException，因为DataOutputStream 在写出的时候会做一些特殊标记，只有DataInputStream 才能成功的读取。*/
 
 //数据流，基于字节流
 public class DataStream {

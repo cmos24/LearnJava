@@ -15,7 +15,7 @@ import java.io.PrintWriter;
 缓存流在写入数据的时候，会先把数据写入到缓存区，直到缓存区达到一定的量，才把这些数据，一起写入到硬盘中去。按照这种操作模式，就不会像字节流，字符流那样每写一个字节都访问硬盘，从而减少了IO操作*/
 
 //缓存流
-public class Cache {
+public class Buffered {
 	public static void main(String[] args) {
 		// 示例 1 : 使用缓存流读取数据
 		File f1 = new File("h:/TestFile4.txt");

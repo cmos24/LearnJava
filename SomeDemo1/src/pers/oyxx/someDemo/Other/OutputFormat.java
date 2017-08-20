@@ -40,4 +40,9 @@ public class OutputFormat {
 		System.out.printf(str,place,factory,bossname,howmany,what,what,bossname);
 		
 	}
+	
+	public static void main(String[] args) {
+		OutputFormat opf=new OutputFormat();
+		opf.outputFormatTest();
+	}
 }

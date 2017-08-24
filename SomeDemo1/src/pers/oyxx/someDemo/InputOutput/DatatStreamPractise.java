@@ -1,4 +1,4 @@
-package DataInputOutputStream;
+package pers.oyxx.someDemo.InputOutput;
 
 import java.io.BufferedReader;
 import java.io.DataInputStream;

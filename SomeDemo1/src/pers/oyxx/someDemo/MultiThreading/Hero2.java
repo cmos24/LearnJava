@@ -23,6 +23,15 @@ public class Hero2 {
             System.out.println(h.name +"ËÀÍö");
     }
  
+    //µôÑª
+    public void hurt(){
+    	hp-=1;
+    }
+    //»ØÑª
+    public void recover(){
+    	hp+=1;
+    }
+    
     public boolean isDead() {
         return 0>=hp?true:false;
     }

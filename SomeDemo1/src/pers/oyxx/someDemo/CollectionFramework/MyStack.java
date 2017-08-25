@@ -16,36 +16,36 @@ public class MyStack implements Stack {
 	LinkedList<Hero> heros = new LinkedList<Hero>();
 
 	@Override
-	public void push(Hero h) {
+	public synchronized void push(Hero h) {// 插入的时候，加上synchronized，同步对象是当前实例
 		heros.addLast(h);
 	}
 
 	@Override
-	public Hero pull() {
-		Hero lastHero=heros.getLast();
+	public synchronized Hero pull() { // 取出的时候，加上synchronized，同步对象是当前实例
+		Hero lastHero = heros.getLast();
 		heros.removeLast();
 		return lastHero;
 	}
 
 	@Override
-	public Hero peek() {
-		Hero lastHero=heros.getLast();
+	public Hero peek() { // 查看不用加synchronized同步对象因为只是查看不修改数据
+		Hero lastHero = heros.getLast();
 		return lastHero;
 	}
 
 	public static void main(String[] args) {
-		MyStack heroStack=new MyStack();
-		for(int i=0;i<5;i++){
-			heroStack.push(new Hero("hero"+i));
-			System.out.println("向栈中压入hero:"+i);
+		MyStack heroStack = new MyStack();
+		for (int i = 0; i < 5; i++) {
+			heroStack.push(new Hero("hero" + i));
+			System.out.println("向栈中压入hero:" + i);
 		}
-		//弹出最后一个Hero对象
-		Hero lastHero=heroStack.pull();
-		System.out.println("弹出最后一个Hero对象："+lastHero);
-		//获得最后一个Hero对象
-		Hero lastHero2=heroStack.peek();
-		System.out.println("获得最后一个Hero对象："+lastHero2);
-		
-		System.out.println("现在heroStack中有的元素："+heroStack.heros);
+		// 弹出最后一个Hero对象
+		Hero lastHero = heroStack.pull();
+		System.out.println("弹出最后一个Hero对象：" + lastHero);
+		// 获得最后一个Hero对象
+		Hero lastHero2 = heroStack.peek();
+		System.out.println("获得最后一个Hero对象：" + lastHero2);
+
+		System.out.println("现在heroStack中有的元素：" + heroStack.heros);
 	}
 }
